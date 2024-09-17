@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using System.Linq; // For Count() method
 using System.Text.Json;
 using Xunit;
 
@@ -24,7 +25,6 @@ namespace InterviewTestMid.Tests
             public PartOpacity PartOpacity { get; set; }
         }
 
-        // Meta sub-objects (simplified for brevity)
         private class PartClassification { }
         private class PartMasterType { }
         private class PartColour { }
@@ -46,8 +46,15 @@ namespace InterviewTestMid.Tests
         [Fact]
         public void CheckNumberOfMetaObjects()
         {
-            // Load your JSON data
-            string jsonData = File.ReadAllText("C:\\Users\\90cal\\Source\\Repos\\pablocaldasG\\InterviewTestMSCaldasPablo\\InterviewTestMid\\Data\\SampleData.json");
+            // Construct the relative path to the JSON file (ensuring it works across platforms)
+            string projectDir = Directory.GetCurrentDirectory();
+            string jsonFilePath = Path.Combine(projectDir, "Data", "SampleData.json");
+
+            // Ensure that the file exists
+            Assert.True(File.Exists(jsonFilePath), $"SampleData.json not found at {jsonFilePath}");
+
+            // Load the JSON data
+            string jsonData = File.ReadAllText(jsonFilePath);
 
             // Deserialize JSON into Part class structure
             var parts = JsonSerializer.Deserialize<List<Part>>(jsonData);
@@ -59,10 +66,10 @@ namespace InterviewTestMid.Tests
             // Ensure the Meta object is not null for each part
             foreach (var part in parts)
             {
-                Assert.NotNull(part.Meta); // This is the line causing the current failure
+                Assert.NotNull(part.Meta); // Check Meta object for each part
             }
 
-            // Check the number of meta objects, for example:
+            // Check the number of Meta objects, for example:
             int numberOfMetaObjects = parts.Count(p => p.Meta != null);
             Assert.True(numberOfMetaObjects > 0, "No Meta objects found.");
         }
