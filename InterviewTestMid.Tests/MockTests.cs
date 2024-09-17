@@ -17,7 +17,7 @@ namespace InterviewTestMid.Tests
             // Act
             mockLogger.Object.WriteLogMessage(testMessage);
 
-            // Assert
+            //Assert
             mockLogger.Verify(logger => logger.WriteLogMessage(testMessage), Times.Once);
         }
 
