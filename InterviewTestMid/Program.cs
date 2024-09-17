@@ -45,7 +45,7 @@ namespace InterviewTestMid
             if (foilPart != null)
             {
                 _logger.WriteLogMessage($"Original PartWeight: {foilPart.PartWeight.Value}");
-                foilPart.PartWeight.Value = 1.5; // Change the PartWeight
+                foilPart.PartWeight.Value = 1.5; 
                 _logger.WriteLogMessage($"Updated PartWeight: {foilPart.PartWeight.Value}");
             }
 
