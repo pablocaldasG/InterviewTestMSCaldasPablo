@@ -31,5 +31,4 @@ jobs:
 
       run: dotnet test --configuration Debug --verbosity normal
 
-      run: dotnet test InterviewTestMid.sln --configuration Debug --no-build --verbosity normal
 
