@@ -8,7 +8,7 @@ namespace InterviewTestMid
         public void WriteLogMessage(string LogMessage)
         {
             if (string.IsNullOrEmpty(LogMessage))
-                throw new ArgumentException("Log message not provided", "LogMessage");
+                throw new ArgumentException("Log message not provided ", "LogMessage");
 
             Debug.WriteLine(LogMessage);
         }
