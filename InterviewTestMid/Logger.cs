@@ -2,7 +2,7 @@
 
 namespace InterviewTestMid
 {
-    internal class Logger
+    internal class Logger : LoggerInterface
     {
 
         public void WriteLogMessage(string LogMessage)
@@ -20,6 +20,16 @@ namespace InterviewTestMid
 
             Debug.WriteLine($"Error recieved: {Ex.Message}");
             Debug.WriteLine($"{Ex.StackTrace}");
+        }
+        public void LogMessage(string message)
+        {
+            Console.WriteLine($"{DateTime.Now}: {message}");
+        }
+
+        public void LogMessagesToCSV(List<string> messages)
+        {
+            var csv = string.Join(",", messages);
+            File.WriteAllText("log.csv", csv); // Example writing to a CSV file
         }
     }
 }
