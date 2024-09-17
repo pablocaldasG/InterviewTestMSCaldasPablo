@@ -16,9 +16,9 @@ namespace InterviewTestMid
         public void WriteErrorMessage(Exception Ex)
         {
             if (Ex == null)
-                throw new ArgumentException("Exception not provided", "Ex");
+                throw new ArgumentException("Exception not provided ", "Ex");
 
-            Debug.WriteLine($"Error recieved: {Ex.Message}");
+            Debug.WriteLine($"Error recieved:  {Ex.Message}");
             Debug.WriteLine($"{Ex.StackTrace}");
         }
         public void LogMessage(string message)
