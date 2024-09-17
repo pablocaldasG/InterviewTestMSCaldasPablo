@@ -28,7 +28,7 @@
     },
     "PartWeight": {
       "UoM": 10,
-      "Value": 0.50000000
+      "Value": 0.5
     },
     "ConversionsApplied": false,
     "Materials": [
@@ -38,7 +38,10 @@
           "LookNbr": "PapPap",
           "LookDesc": "Paper"
         },
-        "Percentage": 100.000000
+        "Percentage": 100,
+        "MatrIsBarrier": false,
+        "MatrIsDensifier": false,
+        "MatrIsOpacifier": false
       }
     ]
   },
@@ -71,7 +74,7 @@
     },
     "PartWeight": {
       "UoM": 10,
-      "Value": 1.00000000
+      "Value": 1
     },
     "ConversionsApplied": false,
     "Materials": [
@@ -81,7 +84,10 @@
           "LookNbr": "PlaPet",
           "LookDesc": "Plastic - PET"
         },
-        "Percentage": 100.000000
+        "Percentage": 100,
+        "MatrIsBarrier": false,
+        "MatrIsDensifier": false,
+        "MatrIsOpacifier": false
       }
     ]
   },
@@ -101,6 +107,7 @@
         "LookNbr": "E20",
         "LookDesc": "Wrap (Non Stretch/Shrink)"
       },
+      "PartColour": null,
       "PartOpacity": {
         "LookId": 3,
         "LookNbr": "Op",
@@ -109,7 +116,7 @@
     },
     "PartWeight": {
       "UoM": 10,
-      "Value": 1.00000000
+      "Value": 1.5
     },
     "ConversionsApplied": false,
     "Materials": [
@@ -119,7 +126,7 @@
           "LookNbr": "PlaLDP",
           "LookDesc": "Plastic - LDPE"
         },
-        "Percentage": 50.000000,
+        "Percentage": 50,
         "MatrIsBarrier": false,
         "MatrIsDensifier": false,
         "MatrIsOpacifier": false
@@ -130,7 +137,10 @@
           "LookNbr": "MetAlu",
           "LookDesc": "Metal - Aluminium"
         },
-        "Percentage": 50.000000
+        "Percentage": 50,
+        "MatrIsBarrier": false,
+        "MatrIsDensifier": false,
+        "MatrIsOpacifier": false
       }
     ]
   }
