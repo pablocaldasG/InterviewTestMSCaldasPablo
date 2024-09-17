@@ -29,7 +29,7 @@ namespace InterviewTestMid
         public void LogMessagesToCSV(List<string> messages)
         {
             var csv = string.Join(",", messages);
-            File.WriteAllText("log.csv", csv); // Example writing to a CSV file
+            File.WriteAllText("log.csv", csv); 
         }
     }
 }
