@@ -7,13 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterviewTestMid", "Intervi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{72070C7A-C564-488F-8FD4-BC5BEF970422}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterviewTestMid.Tests", "InterviewTestMid.Tests\InterviewTestMid.Tests.csproj", "{5B7E42F2-74A6-49D2-ABB5-0D92D1915082}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterviewTestMid.Tests", "InterviewTestMid.Tests\InterviewTestMid.Tests.csproj", "{5B7E42F2-74A6-49D2-ABB5-0D92D1915082}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{2C3C527E-B4A1-47C1-AF0D-CD1310A74AA2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{961B7667-8415-4042-BBF2-379137597285}"
 	ProjectSection(SolutionItems) = preProject
-		main.yml = main.yml
+		.github\workflows\dotnet-desktop.yml = .github\workflows\dotnet-desktop.yml
 	EndProjectSection
 EndProject
 Global
